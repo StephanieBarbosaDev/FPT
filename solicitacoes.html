@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Solicitações</title>
+  <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="homeEmpresa.css">
+  <link rel="stylesheet" href="solicitacoes.css">
+</head>
+<body>
+  <header class="header">
+  <img src="favicon.png" alt="logo" class="logo">
+    <div class="header-right">
+      <button class="btn-nav" id="btn-back-solicitacoes">Voltar</button>
+    </div>
+  </header>
+
+  <main style="padding-top:150px;padding-left:20px;padding-right:20px;">
+    <div class="container">
+      <h2 class="center" style="color:var(--brand);margin-bottom:12px">Solicitações Recebidas</h2>
+      <section id="list" class="list"></section>
+    </div>
+  </main>
+
+   <footer class="rodape">
+    <p>&copy; 2025 <br> Farmácia para Todos.<br>Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="solicitacoes.js"></script>
+  <script>
+    // garante que o botão voltar volte ao Home
+    document.addEventListener('DOMContentLoaded', () => {
+      const b = document.getElementById('btn-back-solicitacoes');
+  if (b) b.addEventListener('click', () => location.href = 'homeEmpresa.html');
+    });
+  </script>
+</body>
+</html>

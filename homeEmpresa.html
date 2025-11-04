@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Farmácia para Todos | Home Empresa</title>
+  <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="homeEmpresa.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header class="header">
+  <img src="favicon.png" alt="logo" class="logo">
+    <div class="header-right">
+  <a class="link-plain" href="cadastroRemedio.html">CADASTRAR REMÉDIO</a>
+  <a class="link-plain small-muted" href="solicitacoes.html">SOLICITAÇÕES</a>
+    </div>
+  </header>
+
+  <main class="container" style="padding-top:150px;padding-bottom:60px">
+    <h2 style="color:var(--brand);margin-bottom:6px">Meus Medicamentos</h2>
+    <p class="hint" style="margin-bottom:18px">Aqui aparecem os medicamentos cadastrados pela sua empresa.</p>
+
+    <section id="cards-area" class="cards-area">
+      <!-- cards-grid será injetado por JS somente se houver remédios -->
+    </section>
+  </main>
+
+ <footer class="rodape">
+    <p>&copy; 2025 <br> Farmácia para Todos.<br>Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="homeEmpresa.js"></script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Farmácia para Todos | Status</title>
+  <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="homeCivil.css">
+  <link rel="stylesheet" href="solicitacoes.css">
+</head>
+<body>
+  <header class="header">
+  <img src="favicon.png" alt="logo" class="logo">
+    <div class="header-right">
+      <button class="btn-nav" id="btn-back-solicitacoes">Voltar</button>
+    </div>
+  </header>
+
+  <main style="padding-top:150px;padding-left:20px;padding-right:20px;">
+    <div class="container">
+      <h2 class="center" style="color:var(--brand);margin-bottom:12px">Solicitações Pendentes</h2>
+  <section id="list" class="list"></section>
+    </div>
+  </main>
+
+   <footer class="rodape">
+    <p>&copy; 2025 <br> Farmácia para Todos.<br>Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const b = document.getElementById('btn-back-solicitacoes');
+  if (b) b.addEventListener('click', () => location.href = 'homeCivil.html');
+  if (b) b.addEventListener('click', () => location.href = 'homeCivil.html');
+
+      // Exibe solicitações e status sem botões de ação
+      const list = document.getElementById('list');
+      const solicitacoesRaw = localStorage.getItem('solicitacoes');
+      const solicitacoes = solicitacoesRaw ? JSON.parse(solicitacoesRaw) : [];
+      if (!solicitacoes.length) {
+        list.innerHTML = '<div class="empty-note">Nenhuma solicitação realizada.</div>';
+        return;
+      }
+      solicitacoes.forEach((sol) => {
+        const div = document.createElement('div');
+        div.className = 'solicitacao-card';
+        div.style.border = '1px solid #ccc';
+        div.style.padding = '12px';
+        div.style.marginBottom = '8px';
+        let status = sol.status;
+        let expirada = false;
+        if (sol.expiraEm && sol.status === 'Pendente') {
+          const agora = new Date();
+          const expira = new Date(sol.expiraEm);
+          if (agora > expira) {
+            status = 'Expirada';
+            expirada = true;
+          }
+        }
+        let corStatus = '#FFC107'; // amarelo padrão para pendente
+        if (status === 'Aprovado' || status === 'Aprovada') corStatus = '#43A047'; // verde
+        if (status === 'Recusado' || status === 'Recusada') corStatus = '#E53935'; // vermelho
+        if (status === 'Expirada') corStatus = '#E53935'; // vermelho para expirada
+        let info = `<b>${sol.nome}</b> <span style='margin-left:8px'>Status: <span class='badge' style='font-weight:bold;background:${corStatus};color:#fff;padding:2px 12px;border-radius:6px'>${status}</span></span>`;
+        if ((sol.status === 'Aprovado' || sol.status === 'Aprovada') && !expirada) {
+          // Gera um código de 6 dígitos numéricos
+          let codigo = sol.codigoRetirada;
+          if (!codigo) {
+            codigo = Math.floor(100000 + Math.random() * 900000).toString();
+            sol.codigoRetirada = codigo;
+            // Atualiza no localStorage
+            const solicitacoesRaw = localStorage.getItem('solicitacoes');
+            const solicitacoesArr = solicitacoesRaw ? JSON.parse(solicitacoesRaw) : [];
+            const idx = solicitacoesArr.findIndex(s2 => s2.data === sol.data && s2.nome === sol.nome);
+            if (idx !== -1) {
+              solicitacoesArr[idx].codigoRetirada = codigo;
+              localStorage.setItem('solicitacoes', JSON.stringify(solicitacoesArr));
+            }
+          }
+          info += `<br><span style='color:green;font-weight:bold'>Local de retirada: Farmácia Central, Rua das Flores, 123</span>`;
+          info += `<br><span style='color:#333;font-weight:bold'>Código de retirada: <span style='background:#eee;padding:2px 8px;border-radius:6px'>${codigo}</span></span>`;
+        }
+        if (expirada) {
+          info += `<br><span style='color:red;font-weight:bold'>Solicitação expirada após 5 horas.</span>`;
+        }
+        div.innerHTML = info;
+        list.appendChild(div);
+      });
+    });
+  </script>
+</body>
+</html>

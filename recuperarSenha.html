@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="recuperarSenha.css" />
+    <title>Farmácia para Todos | Recuperar Senha</title>
+  <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+  </head>
+  <body>
+    <div class="login-page">
+      <div class="login-card">
+        <img
+          class="img-logo"
+          src="favicon.png"
+          alt="Logotipo da Farmácia para Todos"
+        />
+
+        <h2 class="login-title">Recuperar Senha</h2>
+
+        <p>
+          Insira um email que possa estar associado à sua conta. Se ele
+          corresponder, enviaremos um código.
+        </p>
+
+        <form id="form-login">
+          <label for="email">E-mail </label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="email@.com"
+            required
+          />
+
+          <button type="submit" class="btn-login">Avançar</button>
+          <p id="erro" style="color: red; display: none"></p>
+        </form>
+      </div>
+    </div>
+
+    <footer class="rodape">
+      <p>
+        &copy; 2025 <br />
+        Farmácia para Todos.<br />Todos os direitos reservados.
+      </p>
+    </footer>
+  </body>
+</html>

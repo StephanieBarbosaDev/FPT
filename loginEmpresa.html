@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="loginEmpresa.css" />
+    <title>Farmácia para Todos | Login</title>
+    <link
+      rel="shortcut icon"
+      href="favicon.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <div class="login-page">
+      <div class="login-card">
+        <img
+          class="img-card"
+          src="favicon.png"
+          alt="Logotipo da Farmácia para Todos"
+        />
+
+        <h2 class="login-title">LOGIN</h2>
+
+        <form id="form-login">
+          <label for="usuario">Usuário</label>
+          <input type="text" id="usuario" placeholder="Seu usuário" required />
+
+          <label for="senha">Senha</label>
+          <input
+            type="password"
+            id="senha"
+            placeholder="Sua senha"
+            required
+            minlength="4"
+          />
+
+          <div class="checkbox-container">
+            <input type="checkbox" id="manter-logado" />
+            <label for="manter-logado">Manter-me logado</label>
+          </div>
+
+          <button type="submit" class="btn-login">Entrar</button>
+          <p id="erro" style="color: red; display: none"></p>
+        </form>
+
+        <div class="extras link-gray">
+          <p>
+            <a href="recuperarSenha.html" class="link link-purple"
+              >Esqueceu a senha?</a>
+          </p>
+
+          <p>
+            Não possui conta ainda?
+            <a
+              href="cadastroEmpresa.html"
+              class="link link-purple"
+              >Crie uma nova conta</a>
+          </p>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <footer class="rodape">
+      <p>
+        &copy; 2025 <br />
+        Farmácia para Todos.<br />Todos os direitos reservados.
+      </p>
+    </footer>
+
+    <script src="loginEmpresa.js"></script>
+  </body>
+</html>

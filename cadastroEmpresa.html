@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="cadastroEmpresa.css" />
+  <title>Farmácia para Todos | Cadastro Empresa</title>
+  <link rel="icon" type="image/x-icon" href="favicon.png" />
+</head>
+<body>
+  
+ 
+  <div class="login-page">
+    <div class="login-card">
+  <img class="img-logo" src="favicon.png" alt="Logotipo da Farmácia para Todos">
+
+
+      <h2 class="login-title">CADASTRO DE EMPRESA</h2>
+
+      <form id="form-cadastro" novalidate>
+        <label for="cnpj">CNPJ</label>
+        <input type="text" id="cnpj" name="cnpj" placeholder="00.000.000/0000-00" required minlength="18" maxlength="18" />
+
+        <label for="razao">Razão Social</label>
+        <input type="text" id="razao" name="razao" placeholder="Nome jurídico da empresa" required />
+
+        <label for="email">E-mail Corporativo</label>
+        <input type="email" id="email" name="email" placeholder="email@empresa.com" required />
+
+        <label for="telefone">Telefone</label>
+        <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" required minlength="14" maxlength="15"/>
+
+        <label for="senha">Senha</label>
+        <input type="password" id="senha" name="senha" placeholder="Senha (mín. 6 caracteres)" required minlength="6" />
+
+        <label for="confirma-senha">Confirmação de Senha</label>
+        <input type="password" id="confirma-senha" name="confirma-senha" placeholder="Repita a senha" required minlength="6" />
+
+        <label for="cep">CEP</label>
+        <input type="text" id="cep" name="cep" placeholder="00000000" required minlength="8" maxlength="8" />
+
+        <label for="logradouro">Logradouro</label>
+
+        
+        <input type="text" id="logradouro" name="logradouro" placeholder="Rua / Av." required />
+
+        <label for="numero">Número</label>
+        <input type="text" id="numero" name="numero" placeholder="Número" required />
+
+        <label for="bairro">Bairro</label>
+        <input type="text" id="bairro" name="bairro" placeholder="Bairro" required />
+
+        <label for="cidade">Município</label>
+        <input type="text" id="cidade" name="cidade" placeholder="Cidade" required />
+
+        <label for="uf">UF</label>
+        <input type="text" id="uf" name="uf" placeholder="UF" required maxlength="2" />
+
+        <button type="submit" class="btn-login">Cadastrar</button>
+
+        <p id="mensagem-erro" style="color: red; display: none;"></p>
+        <p id="mensagem-sucesso" style="color: green; display: none;"></p>
+      </form>
+
+      <div class="extras link-gray">
+        <p>
+          Já possui conta? <a href="loginEmpresa.html" class="link link-purple">Acesse o login</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <footer class="rodape">
+    <p>&copy; 2025 <br> Farmácia para Todos.<br>Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>
+
+  <script src="/frontend/scripts/empresa/cadastroEmpresa.js"></script>
+</body>
+</html>

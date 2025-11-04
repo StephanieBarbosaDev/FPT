@@ -1,0 +1,93 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.sol-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 12px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* imagem pequena */
+.thumb {
+  width: 120px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #eeeeee;
+}
+
+.sol-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.sol-meta {
+  display: flex;
+  gap: 12px;
+  color: #6b7280;
+  align-items: center;
+}
+
+.sol-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-approve {
+  background: #88b0ff;
+  color: #001639;
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+}
+.btn-reject {
+  background: #c0392b;
+  color: #ffffff;
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+.btn-del {
+  background: #999999;
+  color: #ffffff;
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: none;
+}
+
+@media (max-width: 700px) {
+  .sol-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .thumb {
+    width: 100%;
+    height: 180px;
+  }
+  .sol-actions {
+    width: 100%;
+    justify-content: flex-end;
+    margin-top: 8px;
+  }
+}
+
+.rodape {
+  background-color: #001639;
+  color: #ffffff;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+  padding: 3px;
+}

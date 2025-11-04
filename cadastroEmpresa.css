@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+}
+
+.img-logo{
+  width: 130px;
+  height: auto;
+  display: block; 
+  margin: -10px auto 10px auto; 
+}
+
+/* cadastro */
+.login-page {
+  min-height: 100vh;
+  background: #eaf1ff;            
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  padding-top: 0;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 520px;
+  background-color: #ffffff;      
+  padding: 2rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+  margin-top: 0;
+}
+
+.login-title {
+  text-align: center;
+  margin-bottom: 1.25rem;
+  color: #001639;                 
+  font-weight: 700;
+  letter-spacing: 0.6px;
+}
+
+label {
+  display: block;
+  margin-top: 0.65rem;
+  margin-bottom: 0.25rem;
+  color: #222222;                
+  font-size: 0.95rem;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"] {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid #e2e8f0;  
+  border-radius: 0.6rem;
+  font-size: 1rem;
+  background-color: #ffffff;      
+}
+
+input:focus {
+  outline: none;
+  border-color: #001639;          
+  box-shadow: 0 0 0 3px rgba(0,22,57,0.06);
+}
+
+.btn-login {
+  width: 100%;
+  display: block;
+  text-align: center;
+  background-color: #001639;      
+  color: #ffffff;                 
+  padding: 0.85rem;
+  border-radius: 0.6rem;
+  font-weight: 700;
+  text-decoration: none;
+  margin-top: 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-login:hover {
+  transform: translateY(-1px);
+}
+
+.link-gray {
+  color: #6b7280;                 
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 0.8rem;
+}
+
+.link-purple {
+  color: #001639;                 
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.link-purple:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  .img { left: 40%; width: 110px; }
+  .login-card { padding: 1.5rem; }
+}
+
+.rodape {
+  background-color: #001639; 
+  color: #ffffff;             
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+  padding: 3px;
+}

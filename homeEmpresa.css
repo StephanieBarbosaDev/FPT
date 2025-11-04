@@ -1,0 +1,262 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+  background: #eaf1ff;
+  color: #111;
+  min-height: 100vh;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 28px;
+  z-index: 999;
+  background: rgba(250, 250, 255, 0.98);
+  backdrop-filter: blur(4px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+}
+.header .logo {
+  height: 90px;
+  width: auto;
+  padding: 6px;
+}
+.header .header-right {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.link-plain {
+  color: #001639;
+  text-decoration: none;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.btn-nav {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  background: transparent;
+  color: #001639;
+  font-weight: 700;
+}
+.btn-nav.secondary {
+  background: #001639;
+  color: #fff;
+  border: none;
+}
+
+.small-muted {
+  color: #6b7280;
+  font-size: 0.95rem;
+}
+
+.form-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(2, 6, 23, 0.06);
+}
+.label {
+  font-weight: 700;
+  color: #222;
+}
+.input,
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  font-size: 1rem;
+  background: #ffffff;
+}
+.textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.form-row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.form-row .label {
+  flex: 0 0 120px;
+}
+.form-row .input,
+.form-row textarea,
+.form-row select {
+  flex: 1;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 18px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 700;
+}
+.pill-edit {
+  background: #88b0ff;
+  color: #001639;
+  border: none;
+}
+.pill-delete {
+  background: #05284f;
+  color: #fff;
+  border: none;
+}
+
+.cards-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 36px;
+  margin-top: 20px;
+  justify-content: flex-start;
+}
+.cards-grid .card {
+  flex: 1 1 300px;
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 8px 24px rgba(2, 6, 23, 0.04);
+}
+.card .thumb {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid #e6eefc;
+  background: #f8fbff;
+}
+
+.meta-row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #6b7280;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.badge {
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+.badge.available {
+  background: #e6fff0;
+  color: #067a3b;
+  border: 1px solid #d8f5df;
+}
+.badge.unavailable {
+  background: #fff0f0;
+  color: #c0392b;
+  border: 1px solid #f5d0d0;
+}
+
+.card-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.hint {
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.file-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.thumb-small {
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #e6eefc;
+  background: #ffffff;
+}
+
+@media (max-width: 700px) {
+  .header {
+    height: 96px;
+    padding: 12px 16px;
+  }
+  .header .logo {
+    height: 64px;
+  }
+}
+
+.rodape {
+  background-color: #001639;
+  color: #ffffff;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+  padding: 3px;
+}
+
+.cards-area {
+  min-height: 120px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* Se houver itens, adiciona pequenas margens */
+.cards-area.has-items {
+  margin-top: 6px;
+}
+.cards-area.has-items .cards-grid {
+  margin-top: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 36px;
+  justify-content: flex-start;
+}
+
+.cards-area .cards-grid .card {
+  flex: 1 1 300px;
+  max-width: 320px;
+}
+
+.empty-note {
+  color: #6b7280;
+  padding: 28px;
+  text-align: center;
+  background: transparent;
+}
+
