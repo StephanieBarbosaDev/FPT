@@ -18,7 +18,7 @@ O projeto busca **reduzir o desperdício de remédios** e **ajudar quem precisa*
 
 ## 💡 Sobre o Projeto
 O **Farmácia para Todos** nasceu com o objetivo de criar uma rede colaborativa de doação de medicamentos.  
-No site, **pessoas civis** podem cadastrar remédios disponíveis para doação, enquanto **empresas** podem receber solicitações e gerenciar as doações de forma organizada e transparente.
+No site, **pessoas civis** podem buscar remédios, além de poder doar remédios em alguma unidade próxima, enquanto **empresas** podem receber solicitações e gerenciar as doações de forma organizada e transparente.
 
 ---
 
@@ -64,3 +64,4 @@ O site é composto por:
 
 🚧 Em desenvolvimento...
 Novas funcionalidades e melhorias estão sendo implementadas.
+
